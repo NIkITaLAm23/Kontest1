@@ -3,7 +3,6 @@
 
 int main(void) {
 	unsigned n, k, max = 0;
-
 	scanf("%u%u", &n, &k);
 	unsigned a;
 	for (int i = 0; i<n; n>>=1) {
