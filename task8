@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+
+int main(void) {
+	unsigned n, k, max = 0;
+
+	scanf("%u%u", &n, &k);
+	unsigned a;
+	for (int i = 0; i<n; n>>=1) {
+		a = 0;
+		a = ~a; //1
+		a<<=k; 
+		a = ~a; //маска
+		a = n&a; //последние к разрядов
+		if (a>max)
+			max = a;
+
+		
+	}
+	printf("%u",max);
+	return 0;
+}
