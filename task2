@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void)
+    {
+        int x=1, max, a, n;
+        
+        scanf("%d", &n);
+        scanf("%d", &max);
+        for(--n; n; --n)
+            {
+                scanf("%d", &a);
+                if (a==max)
+                    ++x;
+                else
+                    if (a>max)
+                        {
+                            x=1;
+                            max=a;
+                        }
+            }
+        printf("%d", x);
+    }
