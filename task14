@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main(void) {
+	long long maxA, maxB, minA, minB, n, x;	
+	scanf("%lld%lld%lld", &n, &maxA, &maxB);
+	if (maxA>maxB) {
+		x = maxA;			
+		maxA = maxB;	
+		maxB = x;
+
+	}
+	minB = maxA;
+	minA = maxB;
+	for (n-=2; n; --n) {
+		scanf("%lld",&x);
+		if (x>maxA) {
+			if (x>maxB) {
+				maxA = maxB;
+				maxB = x;
+			}
+			else {
+				maxA = x;
+			}
+		}
+		if (x<minA) {
+			if (x<minB) {
+				minA = minB;
+				minB = x;
+			}
+			else {
+				minA = x;
+			}
+
+		}
+
+	}
+	if (maxA*maxB>minA*minB)
+		printf("%lld %lld", maxA, maxB);
+	else {
+	
+		printf("%lld %lld", minB, minA);
+	}
+	return 0;
+
+}
